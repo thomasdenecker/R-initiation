@@ -1,0 +1,9 @@
+name: "R-initiation"
+output_dir: "."
+navbar:
+  title: "R-initiation"
+  left:
+    - text: "Home"
+      href: index.html
+    - text: "About"
+      href: about.html
