@@ -46,7 +46,6 @@ R est avant tout une calculatrice extrêmement puissante.
 ```
 
 
-
 ## Quitter la session en cours
 
 Pour quitter R, tapez la fonction suivante : ```q()```
