@@ -33,7 +33,7 @@ Dans une console, il suffit de saisir le commande : R
 
 Ici rien à faire, Rstudio ouvre automatiquement un console R. R Studio vous propose aussi un éditeur de texte. J'utilise pour ma part quotidiennement R-Studio. Un petit tour des possibilités de R-studio :
 
-<iframe width="560" height="315" src="https://www.youtube.com/watch?v=n3uue28FD0w" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/n3uue28FD0w" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 
 ## Premier pas 
 
