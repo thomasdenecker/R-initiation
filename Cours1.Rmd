@@ -50,8 +50,9 @@ R est avant tout une calculatrice extrêmement puissante.
 
 Une fonction est un ensemble de commandes pré-programmées.
 Une fonction se caractérise par 
-- Son nom
-- Ses arguments (informations préalables, nécessaires à l'exécution de la fonction). Ses arguments sont placés entre parenthèses.
+
+* Son nom
+* Ses arguments (informations préalables, nécessaires à l'exécution de la fonction). Ses arguments sont placés entre parenthèses.
 
 
 Exemples de noms de fonction : ```cos(); mean(); var();```
