@@ -1,7 +1,7 @@
-name: "R-initiation"
+name: "my-website"
 output_dir: "."
 navbar:
-  title: "R-initiation"
+  title: "My Website"
   left:
     - text: "Home"
       href: index.html
