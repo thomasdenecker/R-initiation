@@ -1,0 +1,55 @@
+---
+title: "Cours 1"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Cours 1
+
+Dans ce cours, nous verrons les bases pour bien commencer.
+
+## Pré-requis
+
+Avant de démarrer ce cours, il faut installer :
+- R ([ici](https://cran.r-project.org/))
+- Rstudio ([ici](https://www.rstudio.com/products/rstudio/download/)) : il s'agit d'une interface graphique pour R.
+
+Note : Ne commencez pas tant que l'installation n'est pas correctement réalisée.
+
+## Ouvrir R
+
+### Dans une console 
+
+Dans une console, il suffit de saisir le commande : R
+
+### Dans Rstudio
+
+Ici rien à faire, Rstudio ouvre automatiquement un console R.
+
+## Premier pas 
+
+R est avant tout une calculatrice extrêmement puissante.
+
+```{r}
+1+1/4
+```
+
+```{r}
+(1+1)/4
+```
+
+```{r}
+21.3*3
+```
+
+
+
+## Quitter la session en cours
+
+Pour quitter R, tapez la fonction suivante : ```q()```
+
+A la question : "Save worksapce image?", il faut toujours répondre n.
+

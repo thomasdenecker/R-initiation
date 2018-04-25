@@ -1,9 +1,16 @@
-name: "my-website"
-output_dir: "."
+name: R-initiation
+output_dir: '.'
 navbar:
-  title: "My Website"
+  title: R-initiation
   left:
-    - text: "Home"
-      href: index.html
-    - text: "About"
-      href: about.html
+  - text: Home
+    href: index.html
+  - text: Cours 1
+    href: Cours1.html
+  - text: About
+    href: about.html
+output:
+  html_document:
+    lib_dir: site_libs
+    self_contained: no
+

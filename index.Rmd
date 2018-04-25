@@ -1,5 +1,12 @@
 ---
-title: "My Website"
+title: "Initiation à R"
 ---
 
-Hello, Website!
+L'objectif de ce cours est de s'initier à la programmation en R.
+
+# Présentation de R
+
+R est un projet gratuit et participatif. Il permet d'utiliser des fonctions statistiques avancées (t-test, ...) et de générer des graphiques (boxplot, heatmap, ...). Il est possible d'enrichir les fonctions de bases avec l'import de packages (orienté vers la bio-informatique, le data mining ou encore les bases de données). Enfin il est possible d'interfacer R avec d'autres langages (bash,...).
+
+Le site de référence est le [Cran](https://cran.r-project.org/).
+
