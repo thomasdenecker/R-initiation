@@ -10,3 +10,4 @@ R est un projet gratuit et participatif. Il permet d'utiliser des fonctions stat
 
 Le site de référence est le [Cran](https://cran.r-project.org/).
 
+Ce cours est basé sur le cours de Gaëlle Lelandais.

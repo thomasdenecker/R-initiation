@@ -1,13 +1,14 @@
 ---
 title: "Cours 1"
-output: html_document
+output:
+  html_document:
+    toc: true
+    toc_float: true
 ---
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
-
-# Cours 1
 
 Dans ce cours, nous verrons les bases pour bien commencer.
 
@@ -45,10 +46,62 @@ R est avant tout une calculatrice extrêmement puissante.
 21.3*3
 ```
 
+## Qu'est ce qu'une fonction?
+
+Une fonction est un ensemble de commandes pré-programmées.
+Une fonction se caractérise par 
+- Son nom
+- Ses arguments (informations préalables, nécessaires à l'exécution de la fonction). Ses arguments sont placés entre parenthèses.
+
+
+Exemples de noms de fonction : ```cos(); mean(); var();```
+
+Exemple d'utilisation : Racine carrée de 16
+```{r}
+sqrt(16)
+```
+
+## Gérer son répertoire de travail
+
+Dans quel répertoire je travaille? ```getwd()```
+
+Changer de répertoire : ```setwd()```
+
+Mise en pratique :
+```{r}
+getwd()
+```
+
+```{r}
+setwd("..")
+getwd()
+```
+
+## Obtenir de l'aide 
+
+Pour avoir de l'aide, il existe plusieurs méthodes :
+
+* ?NomDeLaFonction :```?mean```
+* help(NomDeLaFonction) : ```help(mean)```
+* ```help.start()```
+* Google !
+
+Dans l'aide, vous trouverez différentes sections :
+
+Sections      | Indications
+------------- | -------------
+*Description* | A quoi sert la fonction ?
+*Usage*       | Comment utiliser la fonction ?
+*Arguments*   | Quels paramètres utilise la fonction en entrée ?
+*Details*     | Description technique de la fonction
+*Value*       | Quels paramètres sont retournés par la fonction en sortie ?
+*See also*    | Existe-t-il des fonctions similaires ?
+*Exemple*     | Cas concrets d'utilisation de la fonction
+
 
 ## Quitter la session en cours
 
 Pour quitter R, tapez la fonction suivante : ```q()```
 
-A la question : "Save worksapce image?", il faut toujours répondre n.
+A la question : ```Save worksapce image?```, il faut toujours répondre n.
 

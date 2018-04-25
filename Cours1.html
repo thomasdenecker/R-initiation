@@ -19,6 +19,9 @@
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/default.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
@@ -163,6 +166,101 @@ $(document).ready(function () {
 
 
 
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1,h2,h3",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = true;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+  padding-left: 25px;
+  text-indent: 0;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+
+</style>
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
 
 
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
@@ -203,8 +301,6 @@ $(document).ready(function () {
 </div>
 
 
-<div id="cours-1" class="section level1">
-<h1>Cours 1</h1>
 <p>Dans ce cours, nous verrons les bases pour bien commencer.</p>
 <div id="pre-requis" class="section level2">
 <h2>Pré-requis</h2>
@@ -232,15 +328,84 @@ $(document).ready(function () {
 <pre class="r"><code>21.3*3</code></pre>
 <pre><code>## [1] 63.9</code></pre>
 </div>
+<div id="quest-ce-quune-fonction" class="section level2">
+<h2>Qu’est ce qu’une fonction?</h2>
+<p>Une fonction est un ensemble de commandes pré-programmées. Une fonction se caractérise par - Son nom - Ses arguments (informations préalables, nécessaires à l’exécution de la fonction). Ses arguments sont placés entre parenthèses.</p>
+<p>Exemples de noms de fonction : <code>cos(); mean(); var();</code></p>
+<p>Exemple d’utilisation : Racine carrée de 16</p>
+<pre class="r"><code>sqrt(16)</code></pre>
+<pre><code>## [1] 4</code></pre>
+</div>
+<div id="gerer-son-repertoire-de-travail" class="section level2">
+<h2>Gérer son répertoire de travail</h2>
+<p>Dans quel répertoire je travaille? <code>getwd()</code></p>
+<p>Changer de répertoire : <code>setwd()</code></p>
+<p>Mise en pratique :</p>
+<pre class="r"><code>getwd()</code></pre>
+<pre><code>## [1] &quot;C:/Users/thomas/Desktop/R-initiation&quot;</code></pre>
+<pre class="r"><code>setwd(&quot;..&quot;)
+getwd()</code></pre>
+<pre><code>## [1] &quot;C:/Users/thomas/Desktop&quot;</code></pre>
+</div>
+<div id="obtenir-de-laide" class="section level2">
+<h2>Obtenir de l’aide</h2>
+<p>Pour avoir de l’aide, il existe plusieurs méthodes :</p>
+<ul>
+<li>?NomDeLaFonction :<code>?mean</code></li>
+<li>help(NomDeLaFonction) : <code>help(mean)</code></li>
+<li><code>help.start()</code></li>
+<li>Google !</li>
+</ul>
+<p>Dans l’aide, vous trouverez différentes sections :</p>
+<table>
+<thead>
+<tr class="header">
+<th>Sections</th>
+<th>Indications</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><em>Description</em></td>
+<td>A quoi sert la fonction ?</td>
+</tr>
+<tr class="even">
+<td><em>Usage</em></td>
+<td>Comment utiliser la fonction ?</td>
+</tr>
+<tr class="odd">
+<td><em>Arguments</em></td>
+<td>Quels paramètres utilise la fonction en entrée ?</td>
+</tr>
+<tr class="even">
+<td><em>Details</em></td>
+<td>Description technique de la fonction</td>
+</tr>
+<tr class="odd">
+<td><em>Value</em></td>
+<td>Quels paramètres sont retournés par la fonction en sortie ?</td>
+</tr>
+<tr class="even">
+<td><em>See also</em></td>
+<td>Existe-t-il des fonctions similaires ?</td>
+</tr>
+<tr class="odd">
+<td><em>Exemple</em></td>
+<td>Cas concrets d’utilisation de la fonction</td>
+</tr>
+</tbody>
+</table>
+</div>
 <div id="quitter-la-session-en-cours" class="section level2">
 <h2>Quitter la session en cours</h2>
 <p>Pour quitter R, tapez la fonction suivante : <code>q()</code></p>
-<p>A la question : “Save worksapce image?”, il faut toujours répondre n.</p>
+<p>A la question : <code>Save worksapce image?</code>, il faut toujours répondre n.</p>
+</div>
+
+
+
 </div>
 </div>
-
-
-
 
 </div>
 
