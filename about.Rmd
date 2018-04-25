@@ -1,5 +1,8 @@
 ---
 title: "A propos"
+output:
+  html_document:
+    theme: flatly
 ---
 
 More about this website.

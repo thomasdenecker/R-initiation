@@ -1,5 +1,8 @@
 ---
 title: "Initiation à R"
+output:
+  html_document:
+    theme: flatly
 ---
 
 L'objectif de ce cours est de s'initier à la programmation en R.

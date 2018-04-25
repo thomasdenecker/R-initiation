@@ -2,8 +2,11 @@
 title: "Cours 1"
 output:
   html_document:
+    theme: flatly
     toc: true
     toc_float: true
+    df_print: paged
+    
 ---
 
 ```{r setup, include=FALSE}
@@ -28,7 +31,9 @@ Dans une console, il suffit de saisir le commande : R
 
 ### Dans Rstudio
 
-Ici rien à faire, Rstudio ouvre automatiquement un console R.
+Ici rien à faire, Rstudio ouvre automatiquement un console R. R Studio vous propose aussi un éditeur de texte. J'utilise pour ma part quotidiennement R-Studio. Un petit tour des possibilités de R-studio :
+
+<iframe width="560" height="315" src="https://www.youtube.com/watch?v=n3uue28FD0w" frameborder="0" allowfullscreen></iframe>
 
 ## Premier pas 
 
@@ -98,6 +103,133 @@ Sections      | Indications
 *Value*       | Quels paramètres sont retournés par la fonction en sortie ?
 *See also*    | Existe-t-il des fonctions similaires ?
 *Exemple*     | Cas concrets d'utilisation de la fonction
+
+## Première manipulations de variables
+
+### Affectation 
+
+```{r}
+a = 1   # Affectation dans les versions récentes de R
+a <- 1  # Affectation dans les anciennes versions de R (recommandée)
+```
+
+### Utilisation / Lecture
+
+Affichage :
+```{r}
+a
+```
+
+Modification à la volée du contenu 
+```{r}
+a+1
+```
+
+## Utilisation des vecteurs 
+Le vecteur en R est sans doute un des points les plus importants. Un vecteur est une liste d'éléments du même type (des nombres, des chaines de caractères,...).
+
+Il existe plusieurs fonctions pour créer des vecteurs :
+
+* ```c()``` : c pour combine. Les arguments seront combinés entre eux pour former un vecteur
+```{r}
+c(1,2,3)
+```
+
+* ```x:y``` : x et y sont des nombres, il y a création d'un vecteur de x à y avec un pas de 1
+```{r}
+1:3
+```
+
+* ```seq(x,y,z)``` : création d'un vecteur qui va de x à y avec un pas de z
+```{r}
+seq(1,5,0.5)
+```
+* ```rep(x,y)``` : Création d'un vecteur contenant x, y fois
+```{r}
+rep(1,5)
+```
+* ...
+
+Il existe ensuite des fonctions pour manipuler les vecteurs :
+
+* ```data.class()``` : pour connaitre le type de valeurs sont présentes dans le vecteur
+```{r}
+data.class(1:10)
+data.class(c("A", "B", "C"))
+```
+* ```length()``` : pour connaitre la taille du vecteur
+```{r}
+length(1:10)
+```
+* ```sort()``` : pour trier le vecteur 
+```{r}
+sort(c(2,1,5,3))
+```
+
+## Tirage aléatoire
+
+### Dans un ensemble défini
+
+La fonction ```sample()``` fonction permet de tirer aléatoirement :
+
+* Sans remise : tirage aléatoire de 4 nombres dans un ensemble de valeurs comprises entre 1 et 10.
+```{r}
+sample(1:10, 4)
+```
+* Avec remise : simulation de 10 lancés d'une pièce de monnaie
+```{r}
+sample(c("Pile", "Face"), 10, replace = T ) 
+```
+
+###  En fonction d'une loi normale
+
+La fonction ```rnorm()``` permet de tirer aléatoirement des valeurs en suivant une loi normale. 
+
+```{r}
+rnorm(10)
+hist(rnorm(100))
+```
+
+## Sauvegarde des commandes
+
+N'oubliez pas de mettre toutes les commandes dans un script et de le sauvegarder régulièrement. Ainsi, vous garderez une trace de ce que vous avez fait.
+
+## Les graphiques
+
+R est capable de générer un très grands nombres de représentations graphiques. 
+
+Exemples :
+
+* Histogramme 
+```{r  echo=FALSE}
+hist(rnorm(100))
+```
+* Barplot 
+```{r echo=FALSE}
+cars <- c(1, 3, 6, 4, 9)
+barplot(cars)
+```
+* Pie chart
+```{r echo=FALSE}
+pie(cars)
+```
+* ...
+
+Les graphiques ici ne sont que des exemples non travaillés. Un exemple avec plus de travail (et dynamique!)
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+library(plotly)
+d <- diamonds[sample(nrow(diamonds), 1000), ]
+
+p <- plot_ly(
+  d, x = ~carat, y = ~price,
+  color = ~carat, size = ~carat
+)
+
+p
+
+```
+
 
 
 ## Quitter la session en cours
