@@ -3,6 +3,8 @@ title: "A propos"
 output:
   html_document:
     theme: flatly
+    includes:
+       in_header: header.html
 ---
 
 

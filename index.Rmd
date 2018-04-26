@@ -1,9 +1,13 @@
 ---
 title: "Découverte de R"
+author : Thomas DENECKER
 output:
   html_document:
     theme: flatly
+    includes:
+       in_header: header.html
 ---
+
 
 *Bonjour à tous et bienvenue sur R-discovery*
 
