@@ -11,7 +11,7 @@
 
 
 
-<title>Initiation à R</title>
+<title>Découverte de R</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -173,18 +173,27 @@ $(document).ready(function () {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="index.html">R-initiation</a>
+      <a class="navbar-brand" href="index.html">R-discovery</a>
     </div>
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
   <a href="index.html">Home</a>
 </li>
-<li>
-  <a href="Cours1.html">Cours 1</a>
+<li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+    Initiation
+     
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu" role="menu">
+    <li>
+      <a href="Cours1.html">Cours 1</a>
+    </li>
+  </ul>
 </li>
 <li>
-  <a href="about.html">About</a>
+  <a href="about.html">A propos</a>
 </li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
@@ -198,17 +207,52 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Initiation à R</h1>
+<h1 class="title toc-ignore">Découverte de R</h1>
 
 </div>
 
 
-<p>L’objectif de ce cours est de s’initier à la programmation en R.</p>
-<div id="presentation-de-r" class="section level1">
-<h1>Présentation de R</h1>
+<p><em>Bonjour à tous et bienvenue sur R-discovery</em></p>
+<p><em>L’objectif de ce cours est de décrouvrir le monde merveilleux de la programmation en R.</em></p>
+<p><em>R est un langage que j’utilise quotidiennement et j’espère que je réussirai à vous convaincre de l’utiliser.</em></p>
+<p><em>Je vous souhaite une très bonne visite.</em></p>
+<p>Thomas Denecker</p>
+<div id="presentation-de-r" class="section level2">
+<h2>Présentation de R</h2>
 <p>R est un projet gratuit et participatif. Il permet d’utiliser des fonctions statistiques avancées (t-test, …) et de générer des graphiques (boxplot, heatmap, …). Il est possible d’enrichir les fonctions de bases avec l’import de packages (orienté vers la bio-informatique, le data mining ou encore les bases de données). Enfin il est possible d’interfacer R avec d’autres langages (bash,…).</p>
 <p>Le site de référence est le <a href="https://cran.r-project.org/">Cran</a>.</p>
-<p>Ce cours est basé sur le cours de Gaëlle Lelandais.</p>
+</div>
+<div id="pre-requis" class="section level2">
+<h2>Pré-requis</h2>
+<p>Avant de démarrer ce cours, il faut installer :</p>
+<ul>
+<li>R (<a href="https://cran.r-project.org/">ici</a>)</li>
+<li>Rstudio (<a href="https://www.rstudio.com/products/rstudio/download/">ici</a>) : il s’agit d’une interface graphique pour R.</li>
+</ul>
+<p>Les cours ont été codés avec la version de R : 3.4.3 (2017-11-30).</p>
+</div>
+<div id="le-programme" class="section level2">
+<h2>Le programme</h2>
+<p>Plusieurs cours seront proposés sur ce site :</p>
+<ul>
+<li>Une initiation :
+<ul>
+<li>Cours 1 - Initiation à R : Notion de bases et réalisation de graphiques (basé sur un cours de Gaëlle Lelandais)</li>
+<li>Cours 2 - Les vecteurs et les tableaux (à venir) : Création de vecteurs, lecture de tableaux,..</li>
+<li>Cours 3 - Les boucles et les tests (à venir)</li>
+</ul></li>
+<li>Graphiques avancés
+<ul>
+<li>Cours 4 - Graphiques spéciaux : heatmaps, circos plot, …</li>
+<li>Cours 5 - Graphiques dynamiques : Plotly</li>
+</ul></li>
+<li>A la conquête du web
+<ul>
+<li>Cours 6 - Shiny : Création d’une application web</li>
+<li>Cours 7 - Rmarkdown : Création d’un site web avec R (comme ce site!)</li>
+</ul></li>
+<li>Des packages que j’aime utiliser</li>
+</ul>
 </div>
 
 

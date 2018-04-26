@@ -1,16 +1,49 @@
 ---
-title: "Initiation à R"
+title: "Découverte de R"
 output:
   html_document:
     theme: flatly
 ---
 
-L'objectif de ce cours est de s'initier à la programmation en R.
+*Bonjour à tous et bienvenue sur R-discovery*
 
-# Présentation de R
+*L'objectif de ce cours est de décrouvrir le monde merveilleux de la programmation en R.*
+
+*R est un langage que j'utilise quotidiennement et j'espère que je réussirai à vous convaincre de l'utiliser.*
+
+*Je vous souhaite une très bonne visite.*
+
+Thomas Denecker
+
+
+## Présentation de R
 
 R est un projet gratuit et participatif. Il permet d'utiliser des fonctions statistiques avancées (t-test, ...) et de générer des graphiques (boxplot, heatmap, ...). Il est possible d'enrichir les fonctions de bases avec l'import de packages (orienté vers la bio-informatique, le data mining ou encore les bases de données). Enfin il est possible d'interfacer R avec d'autres langages (bash,...).
 
 Le site de référence est le [Cran](https://cran.r-project.org/).
 
-Ce cours est basé sur le cours de Gaëlle Lelandais.
+## Pré-requis
+
+Avant de démarrer ce cours, il faut installer :
+
+* R ([ici](https://cran.r-project.org/))
+* Rstudio ([ici](https://www.rstudio.com/products/rstudio/download/)) : il s'agit d'une interface graphique pour R.
+
+Les cours ont été codés avec la version de R : 3.4.3 (2017-11-30).
+
+## Le programme
+
+Plusieurs cours seront proposés sur ce site :
+
+* Une initiation :
+    + Cours 1 - Initiation à R : Notion de bases et réalisation de graphiques (basé sur un cours de Gaëlle Lelandais)
+    + Cours 2 - Les vecteurs et les tableaux (à venir) : Création de vecteurs, lecture de tableaux,..
+    + Cours 3 - Les boucles et les tests (à venir)
+* Graphiques avancés
+    + Cours 4 - Graphiques spéciaux : heatmaps, circos plot, ...
+    + Cours 5 - Graphiques dynamiques : Plotly
+* A la conquête du web 
+    + Cours 6 - Shiny : Création d'une application web
+    + Cours 7 - Rmarkdown : Création d'un site web avec R (comme ce site!)
+* Des packages que j'aime utiliser
+

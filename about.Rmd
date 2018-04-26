@@ -5,4 +5,15 @@ output:
     theme: flatly
 ---
 
-More about this website.
+
+## Thomas Denecker
+
+Je suis doctorant en biologie computationnelle et en bioinformatique. Je réalise ma thèse sous la supervision de Gaëlle Lelandais dans l'équipe BIM de Institut de Biologie Intégrative de la Cellule (I2BC) dirigée par Olivier Lespinet. Ma thèse me conduit à utiliser quotidiennement R ce qui m'a poussé à créer ce site. 
+
+Vous pouvez me retrouver sur :
+
+* Mon site : http://thomas.denecker.free.fr/
+* Twitter : https://twitter.com/DeneckerThomas
+* Github : https://github.com/thomasdenecker
+* et bien d'autres que vous trouverez sur mon site
+

@@ -13,15 +13,7 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-Dans ce cours, nous verrons les bases pour bien commencer.
-
-## Pré-requis
-
-Avant de démarrer ce cours, il faut installer :
-- R ([ici](https://cran.r-project.org/))
-- Rstudio ([ici](https://www.rstudio.com/products/rstudio/download/)) : il s'agit d'une interface graphique pour R.
-
-Note : Ne commencez pas tant que l'installation n'est pas correctement réalisée.
+Dans ce cours, nous verrons les bases pour bien commencer. Il est basé sur un cours de Gaëlle Lelandais.
 
 ## Ouvrir R
 
@@ -231,6 +223,127 @@ p
 
 ```
 
+## Nuage de points
+
+Le graphique le plus classique. Pour réaliser un nuage de points, il faut utiliser la fonction ```plot()```.
+
+Exemple :
+```{r}
+plot(1:10, 1:10)
+```
+
+Il existe une ENORME quantité d'arguments pour améliorer ce graphe :
+
+
+* Modifier la forme, la couleur et la taille du point :```pch```,```col``` et ```cex``` 
+* Modifier les axes : taille de l'axe des x (```xlim```), des y (```ylim```), ...
+* Ajouter une légende : sur l'axe des x (```xlab```), des y (```ylab```), un titre (```main```),...
+* Et bien d'autres...
+
+```{r}
+plot(1:10, 1:10, pch = 18, col = "red", cex = 5, 
+     xlim = c(0, 15),ylim = c(0,15),
+     xlab = "Légende axe des X", ylab = "Légende axe des Y",
+     main = "Mon premier graphe")
+```
+
+Ensuite, il est possible d'ajouter d'autres éléments :
+
+* des points : ```points()```
+* des lignes : ```lines()```
+* des lignes horizontales ou verticales : ```abline()```
+
+```{r}
+plot(1:10, 1:10, pch = 18, col = "red", cex = 5, 
+     xlim = c(0, 15),ylim = c(0,15),
+     xlab = "Légende axe des X", ylab = "Légende axe des Y",
+     main = "Mon premier graphe")
+abline(h = 5, col = "purple")
+points(1:10, 10:1, col = "green", cex = 5)
+```
+
+## Histogramme
+
+L'histogramme est très utilisé pour représenter la distribution d'une variable aléatoire dans un échantillon. L'abscisse représente les intervalles de valeurs pris par la variable aléatoire et l'ordonnée les effectifs observés dans chaque intervalle.
+
+Reprenons l'exemple avec un tirage aléatoire de 100 valeurs suivant une loi normale.
+
+```{r}
+VA = rnorm(100)
+VA
+hist(VA)
+```
+
+Encore une fois, il existe de très nombreux paramètres pour optimiser ce graphique :
+
+* Modifier la largeurs des barres de l'histogramme : ```breaks```
+* Changer la couleur : ```col```
+* ...
+
+```{r}
+hist(VA, breaks = c(-4, -2, -1, 0, 2, 5), col = "gold")
+```
+
+## Boxplot
+
+Le boxplot est une représentation graphique d'un ensemble de nombres dont l'information est résumée en 5 valeurs :
+
+![boxplot](Images/boxplot.png)
+Source : https://datavizcatalogue.com/methods/box_plot.html
+
+```{r}
+boxplot(VA, ylab = "Observations de la variable VA")
+```
+
+## Sauvegarder des graphiques
+
+Il y a plusieurs possibilité de créer des fichiers images ou PDF :
+
+* ```jpeg()```, ```png()```, ```bmp()```
+* ```pdf()```
+
+```{r}
+pdf("MonGraphique.pdf") # Je redirige ma sortie graphique vers le fichier MonGraphique.pdf
+boxplot(VA, ylab = "Observations de la variable VA") # Je réalise un graphique
+
+boxplot(rnorm(100), ylab = "Observations d'une autre variable") # Je réalise un autre graphique
+dev.off() # Je dis à R de stopper la redirection de la sortie graphique
+```
+
+et voilà le résultat ! 
+
+<centre>
+<iframe src="MonGraphique.pdf" width="600" height="800" align="middle"></iframe>
+</center>
+## Optimisations graphiques
+### Les couleurs
+
+Il existe plusieurs façon de renseigner des couleurs 
+
+* par un code HEX :```#85C1E9```
+* par un code rgb (avec alpha pour la transparence) : ```rgb(152, 54, 12, maxColorValue = 255, alpha = 150 )
+* Par un nom. Il existe une très grande quantité de noms. Le pdf suivant les regroupe :
+
+<centre>
+<iframe src="./Ressources/Rcolor.pdf" width="600" height="800" align="middle"></iframe>
+</center>
+
+
+Sources : http://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf
+
+### Les formes
+
+Nous avons vu dans le plot comment changer la forme d'un point avec l'argument pch. Voici un mémo des différents codes :
+
+![pch](Ressources/pch.png)
+
+Source : http://coleoguy.blogspot.fr/2016/06/symbols-and-colors-in-r-pch-argument.html
+
+Il est aussi possible de changer le type de lignes :
+
+![pch](Ressources/lty.png)
+
+Source : https://stt4230.rbind.io/communication_resultats/graphiques_r/
 
 
 ## Quitter la session en cours
